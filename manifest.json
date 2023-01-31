@@ -5,12 +5,12 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["https://laftel.net/*"],
+      "matches": ["*://www.laftel.net/*", "*://laftel.net/*"],
       "js": ["document_start.js"],
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://laftel.net/*"],
+      "matches": ["*://www.laftel.net/*", "*://laftel.net/*"],
       "js": ["toastr.js"],
       "run_at": "document_start"
     }

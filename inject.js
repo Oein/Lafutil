@@ -23,10 +23,14 @@ const eventListener = (e) => {
   if (e.code == "KeyI") v.requestPictureInPicture();
   if (e.code == "Period" && !e.shiftKey) v.currentTime += 1 / 60;
   if (e.code == "Comma" && !e.shiftKey) v.currentTime -= 1 / 60;
-  if (e.code == "Period" && e.shiftKey)
-    v.playbackRate = Math.min(v.playbackRate + 0.25, 2);
-  if (e.code == "Comma" && e.shiftKey)
+  if (e.code == "Period" && e.shiftKey) {
+    v.playbackRate = Math.min(v.playbackRate + 0.25, 10);
+    toastr.info("Now video speed is " + v.playbackRate.toString() + "."); 
+  }
+  if (e.code == "Comma" && e.shiftKey) {
     v.playbackRate = Math.max(v.playbackRate - 0.25, 0.25);
+    toastr.info("Now video speed is " + v.playbackRate.toString() + "."); 
+  }
   if (e.code == "Digit1") v.currentTime = (v.duration * 1) / 10;
   if (e.code == "Digit2") v.currentTime = (v.duration * 2) / 10;
   if (e.code == "Digit3") v.currentTime = (v.duration * 3) / 10;

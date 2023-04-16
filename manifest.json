@@ -8,22 +8,12 @@
       "matches": ["*://www.laftel.net/*", "*://laftel.net/*"],
       "js": ["document_start.js"],
       "run_at": "document_idle"
-    },
-    {
-      "matches": ["*://www.laftel.net/*", "*://laftel.net/*"],
-      "js": ["toastr.js"],
-      "run_at": "document_start"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "inject.js",
-        "toastr.min.js",
-        "toastr.min.css",
-        "toastr.js"
-      ],
-      "matches": ["<all_urls>"]
+      "resources": ["inject.js"],
+      "matches": ["*://www.laftel.net/*", "*://laftel.net/*"]
     }
   ],
   "icons": {

@@ -1,0 +1,39 @@
+{
+  "name": "Lafutil",
+  "description": "An extension to make Laftel player compatible.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["*://www.laftel.net/*", "*://laftel.net/*"],
+      "js": ["document_start.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://www.laftel.net/*", "*://laftel.net/*"],
+      "js": ["toastr.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "inject.js",
+        "toastr.min.js",
+        "toastr.min.css",
+        "toastr.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "16.png",
+    "32": "32.png",
+    "48": "48.ico",
+    "64": "64.png",
+    "128": "128.png",
+    "152": "152.png",
+    "256": "256.png",
+    "512": "512.png"
+  }
+}
